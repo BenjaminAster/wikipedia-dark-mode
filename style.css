@@ -1,4 +1,5 @@
 
+/* :root.client-dark-mode { */
 :root {
 	color-scheme: dark !important;
 	--bg: #111 !important;
@@ -6,116 +7,54 @@
 	--gray-2: #333 !important;
 	--link: #9bf !important;
 
-	& body {
-		background-color: var(--bg) !important;
-		color: inherit !important;
-	}
-
-	& img {
+	& img:not(:is([class^="mw-logo-"], .mw-indicators img)) {
 		background-color: white !important;
 	}
 
-	&, & :is(img, video, ogvjs, svg, iframe, .mw-no-invert, td .diffchange, .mwe-math-element, .wvui-typeahead-suggestion__thumbnail, .skin-minerva .mw-notification-visible .mw-notification-content, .cdx-menu-item__thumbnail, .cx-slitem__image, .mw-mmv-overlay, .mw-mmv-pre-image, .media-viewer .image img, .media-viewer .mw-file-description img, .mw-kartographer-map, .mw-kartographer-mapDialog-map, .oo-ui-searchWidget-results .oo-ui-iconElement-icon, .list-thumb, .ext-related-articles-card-list .ext-related-articles-card-thumb) {
+	&, & :is(img, video, svg) {
 		filter: none !important;
 	}
 
-	& .vector-header-container {
+	& :is(.vector-icon, .cdx-text-input__icon, .mw-logo-wordmark, .mw-logo-tagline, .mw-indicators img, .mw-ui-button, .uls-search-label, .popups-icon), & .vector-dropdown-label::after {
+		filter: invert(1) hue-rotate(180deg) !important;
+	}
+
+	& :is(.cdx-button, .uls-language-block > ul > li, .mwe-popups-container, .cdx-search-input) {
+		background-color: transparent !important;
+	}
+
+	& :is(body, .vector-header-container, .mw-page-container, .vector-dropdown-content, .mw-message-box) {
 		background-color: var(--bg) !important;
 	}
-	
-	& .mw-page-container {
-		background-color: var(--bg) !important;
-	}
 
-	& .vector-main-menu {
+	& :is(.vector-main-menu, .vector-toc, table, .mw-notification, .mwe-popups, .infobox, .toc, .thumbinner, figure, figcaption, .wikitable, .cbnnr-main, .cx-callout, .overlay, #simpleSearch, #searchInput, .cnotice, .uls-menu, .uls-search, .uls-lcd, #uls-settings-block, .uls-filtersuggestion, .side-box, .navbox, .catlinks) {
 		background-color: var(--gray-1) !important;
 	}
 
-	& .vector-toc {
-		background-color: var(--gray-1) !important;
+	& :is(.hidden-title, .navbox-title) {
+		background-color: var(--gray-2) !important;
 	}
 
-	& :is(h1, h2, h3, h4, h5, h6) {
+	& :is(body, h1, h2, h3, h4, h5, h6, .cdx-button:enabled, .cdx-button, .infobox, .vector-pinnable-header-label, .vector-menu-heading, .mw-message-box, #contentSub, #contentSub2) {
 		color: inherit !important;
 	}
 
-	& .vector-icon {
-		filter: invert(1) hue-rotate(180deg) !important;
-	}
-
-	& .vector-dropdown-label::after {
-		filter: invert(1) hue-rotate(180deg) !important;
-	}
-
-	& .cdx-search-input .cdx-text-input__icon.cdx-text-input__start-icon {
-		filter: invert(1) hue-rotate(180deg) !important;
-	}
-
-	@layer {
-		& .mw-logo-wordmark {
-			filter: invert(1) hue-rotate(180deg) !important;
-		}
-
-		& .mw-logo-tagline {
-			filter: invert(1) hue-rotate(180deg) !important;
-		}
-	}
-
-	& table, & table.ambox-content, & table.toccolours, & .mw-notification, & .mwe-popups, & .infobox, & .toc, & .thumbinner, & figure[typeof~='mw:File/Thumb'], & figure[typeof~='mw:File/Frame'], & figure[typeof~='mw:File/Thumb'] > figcaption, & figure[typeof~='mw:File/Frame'] > figcaption, & .wikitable, & .cbnnr-main, & .cx-callout, & .overlay.media-viewer, & #simpleSearch, & #simpleSearch #searchInput, & #siteNotice #centralNotice .cnotice {
-		background-color: var(--gray-1) !important;
-	}
-
-	& .infobox {
-		color: inherit !important;
-	}
-
-	& .vector-pinnable-header-label {
-		color: inherit !important;
-	}
-
-	& :is(a, .vector-menu-tabs li a, .vectorTabs li a, .toctogglelabel, .mw-parser-output a.external, .mw-parser-output a.extiw, .mw-parser-output a.extiw:active, #mw-panel .portal .body li a) {
+	& :is(a, .toctogglelabel, .mw-collapsible-text, .vector-pinnable-header-toggle-button) {
 		color: var(--link) !important;
 	}
 
-	& :is(.vector-feature-zebra-design-disabled .vector-pinnable-element .vector-menu-heading, .vector-feature-zebra-design-disabled .vector-dropdown-content .vector-menu-heading) {
-		color: inherit !important;
-	}
-
-	& :is(.vector-feature-zebra-design-disabled .vector-pinnable-header-toggle-button) {
-		color: var(--link) !important;
-	}
-
-	& :is(.cdx-button:enabled.cdx-button--weight-quiet.cdx-button--action-progressive, .cdx-button.cdx-button--fake-button--enabled.cdx-button--weight-quiet.cdx-button--action-progressive) {
-		color: var(--link) !important;
-	}
-
-	& .mw-collapsible-text {
-		color: var(--link) !important;
-	}
-
-	& :is(.vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools, .vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc)::after {
+	& :is(.vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools, .vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc, .mwe-popups-extract)::after {
 		background-image: none !important;
 	}
 
-	& :is(.vector-feature-zebra-design-disabled .vector-dropdown .vector-dropdown-content) {
-		background-color: var(--bg) !important;
-	}
-
-	& :is(.cdx-button:enabled, .cdx-button.cdx-button--fake-button--enabled) {
-		color: inherit !important;
-		background-color: var(--bg) !important;
-	}
-
-	& .mw-message-box {
-		color: inherit !important;
-		background-color: var(--bg) !important;
-	}
-
-	& :is(.vector-feature-zebra-design-disabled #contentSub:not(:empty), .vector-feature-zebra-design-disabled #contentSub2) {
-		color: inherit !important;
-	}
-
-	& .hidden-title {
-		background-color: var(--gray-2) !important;
+	& .mwe-popups-extract {
+		text-overflow: ellipsis !important;
+		overflow: hidden !important;
+		display: -webkit-box !important;
+		-webkit-line-clamp: 10 !important;
+		-webkit-box-orient: vertical !important;
+		height: fit-content !important;
+		min-height: auto !important;
+		max-height: none !important;
 	}
 }
