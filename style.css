@@ -1,11 +1,13 @@
 
-/* :root.client-dark-mode { */
-:root {
-	color-scheme: dark !important;
+:root.client-dark-mode {
+	--text: white !important;
 	--bg: #111 !important;
 	--gray-1: #222 !important;
 	--gray-2: #333 !important;
+	--gray-3: #444 !important;
 	--link: #9bf !important;
+
+	color-scheme: dark !important;
 
 	& img:not(:is([class^="mw-logo-"], .mw-indicators img)) {
 		background-color: white !important;
@@ -15,11 +17,11 @@
 		filter: none !important;
 	}
 
-	& :is(.vector-icon, .cdx-text-input__icon, .mw-logo-wordmark, .mw-logo-tagline, .mw-indicators img, .mw-ui-button, .uls-search-label, .popups-icon), & .vector-dropdown-label::after {
+	& :is(.cdx-icon, .vector-icon, .cdx-text-input__icon, .mw-logo-wordmark, .mw-logo-tagline, .mw-indicators img, .mw-ui-button, .uls-search-label, .popups-icon), & .vector-dropdown-label::after {
 		filter: invert(1) hue-rotate(180deg) !important;
 	}
 
-	& :is(.cdx-button, .uls-language-block > ul > li, .mwe-popups-container, .cdx-search-input) {
+	& :is(.vector-main-menu, .vector-toc, .cdx-button, .uls-language-block > ul > li, .mwe-popups-container, .cdx-search-input, .navbox-even) {
 		background-color: transparent !important;
 	}
 
@@ -27,15 +29,15 @@
 		background-color: var(--bg) !important;
 	}
 
-	& :is(.vector-main-menu, .vector-toc, table, .mw-notification, .mwe-popups, .infobox, .toc, .thumbinner, figure, figcaption, .wikitable, .cbnnr-main, .cx-callout, .overlay, #simpleSearch, #searchInput, .cnotice, .uls-menu, .uls-search, .uls-lcd, #uls-settings-block, .uls-filtersuggestion, .side-box, .navbox, .catlinks) {
+	& :is(table, .mw-notification, .mwe-popups, .infobox, .toc, .thumbinner, figure, figcaption, .wikitable, .cbnnr-main, .cx-callout, .overlay, #simpleSearch, .cdx-text-input__input, .cnotice, .uls-menu, .uls-search, .uls-lcd, #uls-settings-block, .uls-filtersuggestion, .side-box, .navbox, .catlinks, .portalborder, .cdx-menu, .sister-bar, .portal-bar, #mp-topbanner, #mp-left, #mp-right, .mp-box, .thumb) {
 		background-color: var(--gray-1) !important;
 	}
 
-	& :is(.hidden-title, .navbox-title) {
+	& :is(.hidden-title, .navbox-title, .cdx-menu-item--highlighted, .uls-language-block > ul > li:hover, .navbox-abovebelow, .navbox-group, hr, .mp-h2, .wikitable > tr > th, .wikitable > * > tr > th, .infobox-subheader, caption, .module-shortcutboxplain, [style^="background:"], [style*=" background:"], [style*=";background:"], [style^="background-color:"], [style*=" background-color:"], [style*=";background-color:"]) {
 		background-color: var(--gray-2) !important;
 	}
 
-	& :is(body, h1, h2, h3, h4, h5, h6, .cdx-button:enabled, .cdx-button, .infobox, .vector-pinnable-header-label, .vector-menu-heading, .mw-message-box, #contentSub, #contentSub2) {
+	& :is(body, h1, h2, h3, h4, h5, h6, .cdx-menu-item__content, .cdx-menu-item, .cdx-button, .cdx-button, .infobox, .vector-pinnable-header-label, .vector-menu-heading, .mw-message-box, #contentSub, #contentSub2, .cdx-text-input__input, .cdx-menu-item__text, .cdx-menu-item__text__description, .mw-footer li, .wikitable) {
 		color: inherit !important;
 	}
 
@@ -47,6 +49,27 @@
 		background-image: none !important;
 	}
 
+	& :is(.infobox, .navbox, .thumbinner, figure, figcaption, .mw-file-element, .portalborder, .cdx-text-input__input, .cdx-button, .cdx-menu, .cdx-menu-item, .cdx-thumbnail__image, .vector-dropdown-content, .uls-search, .uls-menu, #uls-settings-block, .vector-menu, .thumbimage, .ambox, .navbox-abovebelow, .navbox-group, .navbox-image, .navbox-list, .sister-bar, .catlinks, .mw-footer, .ib-country td, .ib-country th, .portal-bar, .sidebar, #mp-topbanner, #mp-left, #mp-right, .mp-h2, .mp-box, .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wikitable > * > tr > td, .side-box, .ib-settlement td, .ib-settlement th, .sidebar-above, .sidebar-below, .ombox, .thumb, .module-shortcutboxplain, .vector-sticky-header-container, .vector-main-menu-action) {
+		border-color: var(--gray-3) !important;
+	}
+
+	& :is(.vector-page-titlebar, .vector-page-toolbar-container, .vector-pinnable-header, h2) {
+		box-shadow: none;
+		border-bottom: 1px solid var(--gray-2) !important;
+	}
+
+	& ul {
+		list-style-image: none !important;
+	}
+
+	& .cdx-search-input--has-end-button {
+		border: none;
+	}
+
+	& .cdx-button--fake-button {
+		border: none !important;
+	}
+
 	& .mwe-popups-extract {
 		text-overflow: ellipsis !important;
 		overflow: hidden !important;
@@ -56,5 +79,6 @@
 		height: fit-content !important;
 		min-height: auto !important;
 		max-height: none !important;
+		color: var(--text) !important;
 	}
 }
