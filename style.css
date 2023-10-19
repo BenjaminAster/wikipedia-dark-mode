@@ -54,7 +54,7 @@
 	}
 
 	& :is(.vector-page-titlebar, .vector-page-toolbar-container, .vector-pinnable-header, h2) {
-		box-shadow: none;
+		box-shadow: none !important;
 		border-bottom: 1px solid var(--gray-2) !important;
 	}
 
@@ -63,7 +63,7 @@
 	}
 
 	& .cdx-search-input--has-end-button {
-		border: none;
+		border: none !important;
 	}
 
 	& .cdx-button--fake-button {
