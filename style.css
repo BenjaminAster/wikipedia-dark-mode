@@ -21,15 +21,15 @@
 		filter: invert(1) hue-rotate(180deg) !important;
 	}
 
-	& :is(.vector-main-menu, .vector-toc, .cdx-button, .uls-language-block > ul > li, .mwe-popups-container, .cdx-search-input, .navbox-even) {
+	& :is(.vector-main-menu, .vector-toc, .cdx-button, .uls-language-block > ul > li, .mwe-popups-container, .cdx-search-input, .navbox-even, .vector-pinnable-header-toggle-button, li.selected) {
 		background-color: transparent !important;
 	}
 
-	& :is(body, .vector-header-container, .mw-page-container, .vector-dropdown-content, .mw-message-box) {
+	& :is(body, .vector-header-container, .mw-page-container, .vector-dropdown-content, .mw-message-box, .vector-header, .vector-pinned-container, .vector-sticky-header) {
 		background-color: var(--bg) !important;
 	}
 
-	& :is(table, .mw-notification, .mwe-popups, .infobox, .toc, .thumbinner, figure, figcaption, .wikitable, .cbnnr-main, .cx-callout, .overlay, #simpleSearch, .cdx-text-input__input, .cnotice, .uls-menu, .uls-search, .uls-lcd, #uls-settings-block, .uls-filtersuggestion, .side-box, .navbox, .catlinks, .portalborder, .cdx-menu, .sister-bar, .portal-bar, #mp-topbanner, #mp-left, #mp-right, .mp-box, .thumb) {
+	& :is(table, .mw-notification, .mwe-popups, .infobox, .toc, .thumbinner, figure, figcaption, .wikitable, .cbnnr-main, .cx-callout, .overlay, #simpleSearch, .cdx-text-input__input, .cnotice, .uls-menu, .uls-search, .uls-lcd, #uls-settings-block, .uls-filtersuggestion, .side-box, .navbox, .catlinks, .portalborder, .cdx-menu, .sister-bar, .portal-bar, #mp-topbanner, #mp-left, #mp-right, .mp-box, .thumb, .hatnote, .hauptseite-box-content) {
 		background-color: var(--gray-1) !important;
 	}
 
@@ -37,7 +37,7 @@
 		background-color: var(--gray-2) !important;
 	}
 
-	& :is(body, h1, h2, h3, h4, h5, h6, .cdx-menu-item__content, .cdx-menu-item, .cdx-button, .cdx-button, .infobox, .vector-pinnable-header-label, .vector-menu-heading, .mw-message-box, #contentSub, #contentSub2, .cdx-text-input__input, .cdx-menu-item__text, .cdx-menu-item__text__description, .mw-footer li, .wikitable) {
+	& :is(body, h1, h2, h3, h4, h5, h6, .cdx-menu-item__content, .cdx-menu-item, .cdx-button, .cdx-button, .infobox, .vector-pinnable-header-label, .vector-menu-heading, .mw-message-box, #contentSub, #contentSub2, .cdx-text-input__input, .cdx-menu-item__text, .cdx-menu-item__text__description, .mw-footer li, .wikitable, li.selected) {
 		color: inherit !important;
 	}
 
@@ -45,11 +45,11 @@
 		color: var(--link) !important;
 	}
 
-	& :is(.vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools, .vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc, .mwe-popups-extract)::after {
-		background-image: none !important;
+	& :is(.vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools, .vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc, .mwe-popups-extract, .vector-sticky-pinned-container, .vector-page-titlebar)::after {
+		background: none !important;
 	}
 
-	& :is(.infobox, .navbox, .thumbinner, figure, figcaption, .mw-file-element, .portalborder, .cdx-text-input__input, .cdx-button, .cdx-menu, .cdx-menu-item, .cdx-thumbnail__image, .vector-dropdown-content, .uls-search, .uls-menu, #uls-settings-block, .vector-menu, .thumbimage, .ambox, .navbox-abovebelow, .navbox-group, .navbox-image, .navbox-list, .sister-bar, .catlinks, .mw-footer, .ib-country td, .ib-country th, .portal-bar, .sidebar, #mp-topbanner, #mp-left, #mp-right, .mp-h2, .mp-box, .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wikitable > * > tr > td, .side-box, .ib-settlement td, .ib-settlement th, .sidebar-above, .sidebar-below, .ombox, .thumb, .module-shortcutboxplain, .vector-sticky-header-container, .vector-main-menu-action) {
+	& :is(.infobox, .navbox, .thumbinner, figure, figcaption, .mw-file-element, .portalborder, .cdx-text-input__input, .cdx-button, .cdx-menu, .cdx-menu-item, .cdx-thumbnail__image, .vector-dropdown-content, .uls-search, .uls-menu, #uls-settings-block, .vector-menu, .thumbimage, .ambox, .navbox-abovebelow, .navbox-group, .navbox-image, .navbox-list, .sister-bar, .catlinks, .mw-footer, .ib-country td, .ib-country th, .portal-bar, .sidebar, #mp-topbanner, #mp-left, #mp-right, .mp-h2, .mp-box, .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wikitable > * > tr > td, .side-box, .ib-settlement td, .ib-settlement th, .sidebar-above, .sidebar-below, .ombox, .thumb, .module-shortcutboxplain, .vector-sticky-header-container, .vector-main-menu-action, .vector-sticky-header, .vector-menu-heading) {
 		border-color: var(--gray-3) !important;
 	}
 
