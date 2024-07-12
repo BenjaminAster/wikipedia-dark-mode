@@ -3,6 +3,9 @@
 
 A dark mode for Wikipedia
 
+> [!NOTE]
+> The English Wikipedia has now added experimental support for dark mode, making this project somewhat obsolete. However, some non-English Wikipedias (e.g. the German one) don't have native dark mode support yet, so this project is still useful for them.
+
 <table>
 <tbody>
 <tr>
@@ -38,7 +41,7 @@ Light mode
 1. Click on "Custom CSS" next to "Vector (2022)".
 1. Click on "Edit source".
 1. Paste the CSS from [style.css](./style.css) into the code box.
-1. Click "Publish changes". You can leave the edit summary blank.
+1. Write something like "Edit vector-2022.css" into the edit summary, click "This is a minor edit" and publish the changes.
 1. Ignore the Warning of Wikipedia's outdated CSS parser and click "OK".
 1. That's it! In your account dropdown menu, you now have a "Dark mode"/"Light mode" toggle.
 

@@ -37,11 +37,11 @@
 		background-color: var(--gray-2) !important;
 	}
 
-	& :is(body, h1, h2, h3, h4, h5, h6, .cdx-menu-item__content, .cdx-menu-item, .cdx-button, .cdx-button, .infobox, .vector-pinnable-header-label, .vector-menu-heading, .mw-message-box, #contentSub, #contentSub2, .cdx-text-input__input, .cdx-menu-item__text, .cdx-menu-item__text__description, .mw-footer li, .wikitable, li.selected) {
+	& :is(body, h1, h2, h3, h4, h5, h6, .cdx-menu-item__content, .cdx-menu-item, .cdx-button, .cdx-button, .infobox, .vector-pinnable-header-label, .vector-menu-heading, .mw-message-box, #contentSub, #contentSub2, .cdx-text-input__input, .cdx-menu-item__text, .cdx-menu-item__text__description, .mw-footer li, .wikitable, li.selected, .hatnote) {
 		color: inherit !important;
 	}
 
-	& :is(a, .toctogglelabel, .mw-collapsible-text, .vector-pinnable-header-toggle-button) {
+	& :is(a:not(#specificity-hack), .toctogglelabel, .mw-collapsible-text, .vector-pinnable-header-toggle-button) {
 		color: var(--link) !important;
 	}
 
