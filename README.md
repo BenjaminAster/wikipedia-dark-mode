@@ -4,7 +4,7 @@
 A dark mode for Wikipedia
 
 > [!NOTE]
-> The English Wikipedia has now added experimental support for dark mode, making this project somewhat obsolete. However, some non-English Wikipedias (e.g. the German one) don't have native dark mode support yet, so this project is still useful for them.
+> Most Wikipedias have now added native support for dark mode, making this project obsolete.
 
 <table>
 <tbody>
